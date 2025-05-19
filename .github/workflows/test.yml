@@ -16,7 +16,7 @@ jobs:
 
       - name: Start climate services
         run: |
-          cp dev.tmpl.env dev.env && cd development && docker-compose up -d
+          cp dev.tmpl.env dev.env && cd development && docker compose up -d
 
       - name: Run Python lint and test
         run: docker exec climate make linttest
